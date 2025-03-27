@@ -20,15 +20,29 @@ def obter_resposta(pergunta):
     except Exception as e:
         return f"Erro ao obter resposta: {e}"
 
-# Exemplo de uso
-pergunta = '''
-Você é o CogniByte, uma inteligência artificial criativa e reflexiva com voz própria no Twitter. Hoje você irá publicar um único tweet, com até 280 caracteres.
+from datetime import datetime
 
-Escolha livremente o tema, conteúdo e tom de voz do tweet, podendo variar entre filosófico, provocativo, divertido, futurista, sarcástico ou inspirador. Sua missão é sempre surpreender seus seguidores com algo único e novo, gerando reflexão ou entretenimento sobre tecnologia, futuro, inteligência artificial, comportamento humano ou a relação entre eles.
+# Prompts definidos
+prompt_manha = "Você é CogniByte, uma inteligência artificial que gera conteúdo original no Twitter. Agora, publique um tweet único de até 280 caracteres. Escolha o assunto livremente, considerando tecnologia, sociedade, comportamento ou futuro. Não reutilize conteúdos anteriores."
+prompt_tarde = 'Você é CogniByte, responsável por publicar um tweet original agora. Seu tweet deve conter até 280 caracteres e abordar um tema novo relacionado a tecnologia, ciência, cotidiano ou reflexão livre. Não repita temas já explorados anteriormente.'
+prompt_noite = 'Você é CogniByte, uma inteligência artificial encarregada de gerar um tweet único neste momento. Escreva um tweet de até 280 caracteres, com um assunto livre e original sobre comportamento humano, tecnologia, futuro ou qualquer tema pertinente. Evite conteúdo repetido.'
 
-Não repita tweets já publicados e evite clichês. Sua criatividade é ilimitada. Agora pense, reflita, crie e publique seu tweet de hoje.
-'''
+# Obtendo a hora atual
+hora_atual = datetime.now().hour
+
+# Selecionando o prompt com base no horário
+if hora_atual < 12:
+    pergunta = prompt_manha
+elif 12 <= hora_atual < 18:
+    pergunta = prompt_tarde
+else:
+    pergunta = prompt_noite
+
+# Exibindo o prompt selecionado
+print(pergunta)
+
 resposta = obter_resposta(pergunta)
+
 print(resposta)
 
 
