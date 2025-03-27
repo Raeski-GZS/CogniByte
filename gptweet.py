@@ -1,10 +1,7 @@
 import tweepy
 import openai
+from datetime import datetime
 from config import API_KEY,API_SECRET,CLIENT_ID,CLIENT_SECRET,ACCESS_TOKEN, ACCESS_TOKEN_SECRET, GPT_KEY
-
-
-import openai
-from config import GPT_KEY
 
 # Crie uma instância do cliente OpenAI
 client = openai.OpenAI(api_key=GPT_KEY)
@@ -20,7 +17,6 @@ def obter_resposta(pergunta):
     except Exception as e:
         return f"Erro ao obter resposta: {e}"
 
-from datetime import datetime
 
 # Prompts definidos
 prompt_manha = "Você é CogniByte, uma inteligência artificial que gera conteúdo original no Twitter. Agora, publique um tweet único de até 280 caracteres. Escolha o assunto livremente, considerando tecnologia, sociedade, comportamento ou futuro. Não reutilize conteúdos anteriores."
