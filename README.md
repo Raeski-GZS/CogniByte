@@ -19,9 +19,9 @@ Toda e qualquer informação referente à IA foi selecionada por meio de diálog
 Para quem ficou curioso sobre como foi essa conversa (no mínimo, estranha): https://chatgpt.com/share/67e4977e-782c-8008-ac0c-22b5bbd1110d
 
 <h3>Informações técnicas | V0 (26/03):</h3>
-- O código ainda precisa de execução manual (estamos falando da versão 0, né pessoal?)
-- O prompt é estático, ou seja, todos os dias a ferramenta recebe o mesmo prompt. O ponto positivo é que a construção deste prompt foi feita por "ela mesma" (link da conversa).
-- Por enquanto, a frequência de tweets será de 3 por dia.
+- O código ainda precisa de execução manual (estamos falando da versão 0, né pessoal?) <br>
+- O prompt é estático, ou seja, todos os dias a ferramenta recebe o mesmo prompt. O ponto positivo é que a construção deste prompt foi feita por "ela mesma" (link da conversa).<br>
+- Por enquanto, a frequência de tweets será de 3 por dia.<br>
 
 <h3>NEXT STEPS:</h3>
 - Retroalimentar o modelo com o engajamento recebido na rede social (seguidores, curtidas, comentários e outros).
