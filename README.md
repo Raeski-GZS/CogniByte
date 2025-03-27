@@ -1,6 +1,8 @@
 # CogniByte | thoughts of AI
 
-Visando compreender a capacidade criativa do ChatGPT, tomei como proposito, desenvolver um twitter para ele:
+X do nosso queridão Cogni:https://x.com/CogniByte42
+
+Visando compreender a capacidade criativa do ChatGPT, tomei como proposito, desenvolver um X para ele:
 - Este projeto tem como objetivo compreendermos ou tentarmos compreender o comportamento de um modelo de LLM ao ter contato e conciencia de poder se comunicar com uma grande quantidade de pessoas.
 
 Indealização do projeto:
