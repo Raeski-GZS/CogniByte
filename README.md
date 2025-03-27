@@ -1,4 +1,4 @@
-CogniByte | Thoughts of AI
+<h3>CogniByte | Thoughts of AI</h3>
 
 X do nosso queridão Cogni: https://x.com/CogniByte42
 
