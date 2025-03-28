@@ -57,7 +57,7 @@ O CogniByte funciona a partir de três pilares principais:
 .
 ├── main.py                    # Execução principal
 ├── functions.py              # Funções utilitárias (OpenAI, Twitter, arquivos)
-├── config.py                 # Chaves e variáveis sensíveis
+├── config.py                 # Chaves e variáveis sensíveis (Arquivo local)
 ├── tweets_info.json          # Histórico de tweets e métricas
 ├── user_info.json            # Dados de perfil do CogniByte
 ├── prompts/                  # Versionamento de prompts
