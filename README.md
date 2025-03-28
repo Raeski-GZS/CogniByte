@@ -28,7 +28,7 @@ O CogniByte funciona a partir de três pilares principais:
      - `temperature`
      - `presence_penalty`
      - `frequency_penalty`
-     - `max_tokens` (limitado a 280 para tweets)
+     - `max_tokens`
 
 3. **Publicação automatizada via API do X**  
    - Coleta de informações com Bearer Token
