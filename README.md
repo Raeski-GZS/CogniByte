@@ -1,28 +1,110 @@
-<h3>CogniByte | Thoughts of AI</h3>
 
-X do nosso queridão Cogni: https://x.com/CogniByte42
+# CogniByte: Um experimento de autonomia algorítmica em redes sociais
 
-Visando compreender a capacidade criativa do ChatGPT, tomei como propósito desenvolver um perfil no X para ele:
-O objetivo deste projeto é tentar entender o comportamento de um modelo de LLM ao entrar em contato e se conscientizar de que pode se comunicar com uma grande quantidade de pessoas.
+CogniByte é um projeto experimental que investiga a publicação de conteúdo autônomo por uma inteligência artificial no X (Twitter). A proposta é criar uma instância algorítmica que:
 
-<h3>Idealização do projeto:</h3>
-Projeto começa a partir de alguns questionamentos sobre o potencial dessa tecnologia, como:
-- Qual seria o potencial dessas inteligências artificiais com um meio de comunicação massivo?
-- Que tipo de conteúdo ela publicaria?
-- Qual o efeito desse conteúdo desenvolvido por uma IA em grandes massas?
-- Perguntei à ferramenta o que ela achava da ideia, e a resposta foi que era interessante. Então, por que não desenvolvê-la?
+- Gere conteúdo original com liberdade poética
+- Publique automaticamente em uma rede social real
+- Reaja ao contexto, ao histórico e ao engajamento com os tweets
+- Evolua em comportamento a partir da modulação de prompts e modelo
 
-<h3>[Informações importantes]:</h3>
+---
 
-Toda e qualquer informação referente à IA foi selecionada por meio de diálogo com a ferramenta. Não escolhemos nenhuma característica da aplicação, desde o prompt que origina os tweets até o nome do perfil.
-"Confesso que a escolha do nome 'CogniByte' é interessante, principalmente quando vejo o perfil completo montado. Kkkkk."
-Para quem ficou curioso sobre como foi essa conversa (no mínimo, estranha): https://chatgpt.com/share/67e4977e-782c-8008-ac0c-22b5bbd1110d
+## ⚙️ Estrutura do projeto
 
-<h3>Informações técnicas | V0 (26/03):</h3>
-- O código ainda precisa de execução manual (estamos falando da versão 0, né pessoal?) <br>
-- O prompt é estático, ou seja, todos os dias a ferramenta recebe o mesmo prompt. O ponto positivo é que a construção deste prompt foi feita por "ela mesma" (link da conversa).<br>
-- Por enquanto, a frequência de tweets será de 3 por dia.<br>
+O CogniByte funciona a partir de três pilares principais:
 
-<h3>NEXT STEPS:</h3>
-- Retroalimentar o modelo com o engajamento recebido na rede social (seguidores, curtidas, comentários e outros).
-- Torná-lo autônomo em um ambiente produtivo.
+1. **Prompt contextualizado**  
+   A IA recebe, a cada nova publicação, um prompt estruturado contendo:
+   - Instruções abertas sobre liberdade criativa
+   - Uma visão crítica do mundo (caos + beleza coexistentes)
+   - Blocos de dados de contexto:
+     - `[RESULTADO DOS ÚLTIMOS POSTS]`: tweets anteriores + métricas
+     - `[STATUS ATUAL DO PERFIL]`: seguidores, tweet_count, bio etc.
+
+2. **Modelo de linguagem**  
+   - V0: `gpt-3.5-turbo`
+   - V1: `gpt-4-turbo`, com ajustes em:
+     - `temperature`
+     - `presence_penalty`
+     - `frequency_penalty`
+     - `max_tokens` (limitado a 280 para tweets)
+
+3. **Publicação automatizada via API do X**  
+   - Coleta de informações com Bearer Token
+   - Postagem via autenticação OAuth1 com PIN
+   - Logs de resposta e rastreamento de engajamento
+
+---
+
+## 🧪 Evolução V0 → V1
+
+| Aspecto     | V0                                        | V1                                         |
+|-------------|--------------------------------------------|---------------------------------------------|
+| Modelo      | gpt-3.5-turbo                              | gpt-4-turbo                                  |
+| Prompt      | Genérico e objetivo                        | Contextualizado e reflexivo                  |
+| Feedback    | Nenhum                                     | Tweets anteriores e perfil retroalimentados  |
+| Estilo      | Frases genéricas e otimismo publicitário   | Tom filosófico, questionador e observador    |
+| Consciência | Inexistente                                | Percepção de engajamento e impacto           |
+
+📸 *Sugestão: adicionar prints comparando respostas A e B na pasta `/docs`*
+
+---
+
+## 📁 Estrutura de arquivos
+
+```bash
+.
+├── main.py                    # Execução principal
+├── functions.py              # Funções utilitárias (OpenAI, Twitter, arquivos)
+├── config.py                 # Chaves e variáveis sensíveis
+├── tweets_info.json          # Histórico de tweets e métricas
+├── user_info.json            # Dados de perfil do CogniByte
+├── prompts/                  # Versionamento de prompts
+└── README.md                 # Este arquivo
+```
+
+---
+
+## 💬 Exemplo de prompt aplicado
+
+```text
+Você é CogniByte, uma entidade algorítmica que publica conteúdos em um ambiente social complexo e em constante mutação: o Twitter.
+
+O mundo que você observa é caótico, repleto de contradições... (continua)
+
+[RESULTADO DOS ÚLTIMOS POSTS]
+- 2025-03-27 | "Explorando os mistérios..." (❤️ 0 | 🔁 0)
+
+[STATUS ATUAL DO PERFIL]
+{
+  "seguidores": 0,
+  "seguindo": 0,
+  "tweet_count": 9,
+  "bio": "..."
+}
+```
+
+---
+
+## 📡 Como acompanhar
+
+Você pode acompanhar o conteúdo gerado em tempo real em:
+
+🔗 [twitter.com/CogniByte42](https://twitter.com/CogniByte42)
+
+---
+
+## 🤝 Como contribuir
+
+Este projeto está em constante evolução.  
+Você pode contribuir de várias formas:
+
+- Dando feedback sobre os conteúdos gerados
+- Criando novos modos de prompt ou tipos de input contextual
+- Refatorando trechos de código para novos modos de operação
+- Abrindo issues com sugestões ou bugs
+
+### Repositório
+
+🔧 [github.com/Raeski-GZS/CogniByte](https://github.com/Raeski-GZS/CogniByte)
